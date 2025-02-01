@@ -75,6 +75,10 @@ public class PlayerControllerX : MonoBehaviour
             Destroy(other.gameObject);
 
         }
+        else if (other.gameObject.CompareTag("Ground"))
+        {
+            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+        }
 
     }
 
